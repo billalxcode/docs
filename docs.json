@@ -3,7 +3,7 @@
   "theme": "mint",
   "name": "AstraDEX",
   "colors": {
-    "primary": "#16A34A",
+    "primary": "#d6bb9d",
     "light": "#07C983",
     "dark": "#15803D"
   },
@@ -33,20 +33,14 @@
     ],
     "primary": {
       "type": "button",
-      "label": "Dashboard",
-      "href": "https://dashboard.mintlify.com"
+      "label": "Open App",
+      "href": "https://t.me/@useastra_bot"
     }
   },
   "contextual": {
     "options": [
       "copy",
-      "view",
-      "chatgpt",
-      "claude",
-      "perplexity",
-      "mcp",
-      "cursor",
-      "vscode"
+      "view"
     ]
   },
   "footer": {
