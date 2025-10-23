@@ -3,8 +3,6 @@ title: "Architecture"
 description: "The architecture overview of AstraDEX including AI Agent, AsterDEX API integration, and Telegram Mini App infrastructure."
 ---
 
-# Architecture
-
 ## Overview
 
 AstraDEX is built as a modular system that combines decentralized trading infrastructure with intelligent AI-driven analysis.  
@@ -37,92 +35,107 @@ Each request — such as placing an order or fetching market data — is validat
 
 ## Application Layer
 
-This layer represents the **intelligent core** of AstraDEX.  
+This layer represents the **intelligent core** of AstraDEX.\
 It manages user interaction, AI-based decision-making, and integration with the trading engine.
 
 ### AI Chat Agent
-The AI Chat Agent understands user input and responds with relevant trading insights.  
+
+The AI Chat Agent understands user input and responds with relevant trading insights.\
 It can:
-- Analyze current market trends  
-- Generate short-term forecasts  
-- Provide educational explanations about trading concepts  
-- Offer personalized trading suggestions  
+
+- Analyze current market trends
+- Generate short-term forecasts
+- Provide educational explanations about trading concepts
+- Offer personalized trading suggestions
 
 It uses **Natural Language Processing (NLP)** and **machine learning models** trained on trading data to interpret intent and generate meaningful outputs.
 
 ### Market Data Service
+
 This service retrieves and caches live data from the **AsterDEX Market API**, including:
-- Real-time prices and tickers  
-- Order book depth  
-- Historical Kline (candlestick) data  
-- Volume and volatility statistics  
+
+- Real-time prices and tickers
+- Order book depth
+- Historical Kline (candlestick) data
+- Volume and volatility statistics
 
 Cached data helps the AI respond faster and reduces latency for Telegram users.
 
 ### Trade Execution Service
+
 This module interacts directly with the **AsterDEX Trading API** to execute user commands such as:
-- Placing buy or sell orders  
-- Managing open positions  
-- Checking balances and leverage levels  
-- Tracking performance and historical trades  
+
+- Placing buy or sell orders
+- Managing open positions
+- Checking balances and leverage levels
+- Tracking performance and historical trades
 
 All requests are authenticated with secure API keys or wallet-based signatures.
 
 ### AI Strategy Engine
+
 The AI Strategy Engine performs advanced market evaluation by combining:
-- Technical analysis indicators (EMA, RSI, MACD, etc.)  
-- Machine learning–based sentiment analysis  
-- Short-term trend forecasting  
+
+- Technical analysis indicators (EMA, RSI, MACD, etc.)
+- Machine learning–based sentiment analysis
+- Short-term trend forecasting
 
 It provides actionable insights like “Buy the dip” or “Wait for confirmation,” helping users make informed trading decisions.
 
 ## Infrastructure Layer
 
-The Infrastructure Layer connects AstraDEX to the AsterDEX blockchain ecosystem.  
+The Infrastructure Layer connects AstraDEX to the AsterDEX blockchain ecosystem.\
 It focuses on security, scalability, and data reliability.
 
 ### AsterDEX API Integration
-AsterDEX APIs are the backbone of AstraDEX’s trading functionality.  
+
+AsterDEX APIs are the backbone of AstraDEX’s trading functionality.\
 They provide:
-- Market Data endpoints for both spot and futures markets  
-- Trade Execution endpoints for limit, market, and conditional orders  
-- User Data endpoints for portfolio and balance management  
+
+- Market Data endpoints for both spot and futures markets
+- Trade Execution endpoints for limit, market, and conditional orders
+- User Data endpoints for portfolio and balance management
 
 All requests use **HMAC-SHA256 signatures** to verify authenticity and integrity.
 
 ### Smart Contracts
-All on-chain operations are handled by **verified AsterDEX smart contracts**.  
+
+All on-chain operations are handled by **verified AsterDEX smart contracts**.\
 These contracts control:
-- Order matching and execution  
-- Liquidity pools and market-making  
-- Fee distribution and settlement  
-- Margin and leverage management  
+
+- Order matching and execution
+- Liquidity pools and market-making
+- Fee distribution and settlement
+- Margin and leverage management
 
 Because they are **non-custodial**, users retain full control of their assets throughout every transaction.
 
 ### Database and Caching
+
 AstraDEX uses a hybrid data layer for performance:
-- **PostgreSQL / MongoDB** for persistent data (user sessions, preferences, logs)  
-- **Redis** for real-time caching of market data and AI query results  
+
+- **PostgreSQL / MongoDB** for persistent data (user sessions, preferences, logs)
+- **Redis** for real-time caching of market data and AI query results
 
 This combination ensures low-latency performance and smooth scalability.
 
 ## Data Flow Summary
 
-1. **User Interaction** – The user sends a message or command through the Telegram Mini App.  
-2. **Request Handling** – The backend identifies whether it requires AI analysis, trading execution, or market data.  
-3. **API Requests** – AstraDEX communicates with AsterDEX APIs for live data or trade operations.  
-4. **AI Processing** – The AI module analyzes the market and returns insights or trading signals.  
-5. **Response Delivery** – The Telegram Mini App displays the analysis, trade confirmation, or educational response.  
+1. **User Interaction** – The user sends a message or command through the Telegram Mini App.
+2. **Request Handling** – The backend identifies whether it requires AI analysis, trading execution, or market data.
+3. **API Requests** – AstraDEX communicates with AsterDEX APIs for live data or trade operations.
+4. **AI Processing** – The AI module analyzes the market and returns insights or trading signals.
+5. **Response Delivery** – The Telegram Mini App displays the analysis, trade confirmation, or educational response.
 
 ## Scalability and Security
 
-AstraDEX is built on a **microservices architecture**, allowing independent scaling of chat, trading, and AI components.  
+AstraDEX is built on a **microservices architecture**, allowing independent scaling of chat, trading, and AI components.\
 This ensures high availability even under heavy user traffic.
 
 ### Security Highlights
-- End-to-end encryption between Telegram and AstraDEX servers  
-- JWT-based authentication for user sessions  
-- HMAC-signed API communication with AsterDEX  
-- Rate limiting and WAF protection for abuse prevention  
-- Publicly verified smart contracts with audit transparency  
+
+- End-to-end encryption between Telegram and AstraDEX servers
+- JWT-based authentication for user sessions
+- HMAC-signed API communication with AsterDEX
+- Rate limiting and WAF protection for abuse prevention
+- Publicly verified smart contracts with audit transparency

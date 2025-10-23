@@ -1,30 +1,33 @@
 ---
-title: AI Chat
-description: Learn how AstraDEX integrates an AI-powered trading assistant built using LangChain and OpenAI GPT-3.
+title: "AI Chat"
+description: "Learn how AstraDEX integrates an AI-powered trading assistant built using LangChain and OpenAI GPT-3."
 ---
 
-# AI Chat
-
-The **AI Chat Agent** is the core intelligence layer of AstraDEX.  
+The **AI Chat Agent** is the core intelligence layer of AstraDEX.\
 It allows users to interact with the trading system in natural language, enabling real-time analysis, trend predictions, and market insights directly within the Telegram Mini App.
 
 The AI Agent is designed to help both beginner and professional traders understand the market better without relying on external data sources or complex tools.
 
 ## Overview
-The AstraDEX AI Chat Agent is powered by **LangChain** and **OpenAI GPT-3**, forming a flexible and extensible conversational engine.  
+
+The AstraDEX AI Chat Agent is powered by **LangChain** and **OpenAI GPT-3**, forming a flexible and extensible conversational engine.\
 LangChain serves as the **orchestration layer** — managing tools, prompts, and memory — while GPT-3 acts as the **language reasoning model** responsible for interpreting user queries and generating intelligent responses.
 
 This integration allows AstraDEX to provide:
+
 - Natural conversation with AI about market data or trading strategies.
 - Context-aware responses based on historical user interactions.
 - Intelligent market analysis and prediction capabilities.
 
 ## Architecture
+
 The AI Chat system consists of three main layers:
 
 ### 1. Language Understanding Layer
-This layer uses **OpenAI GPT-3** to process user queries and generate contextually relevant responses.  
+
+This layer uses **OpenAI GPT-3** to process user queries and generate contextually relevant responses.\
 It understands user intents such as:
+
 - “What is the BTC trend today?”
 - “Analyze the ETH/USDT market for tomorrow.”
 - “Should I buy or sell now?”
@@ -32,8 +35,10 @@ It understands user intents such as:
 GPT-3 interprets these requests and translates them into actionable instructions for the next layer.
 
 ### 2. LangChain Tooling Layer
-This layer connects GPT-3 with AstraDEX’s internal services through **LangChain Tools**.  
+
+This layer connects GPT-3 with AstraDEX’s internal services through **LangChain Tools**.\
 It enables the model to execute structured tasks such as:
+
 - Fetching live market data from **AsterDEX APIs**.
 - Running technical analysis tools like RSI, MACD, or EMA.
 - Generating summaries and insights from numeric data.
@@ -41,32 +46,37 @@ It enables the model to execute structured tasks such as:
 LangChain also manages the **memory system**, allowing the AI to recall previous user interactions and deliver coherent, multi-turn conversations.
 
 ### 3. Integration Layer
-This layer bridges the AI system with the **Telegram Mini App** and the **AsterDEX trading API**.  
+
+This layer bridges the AI system with the **Telegram Mini App** and the **AsterDEX trading API**.\
 It ensures smooth message delivery, real-time updates, and consistent data synchronization between the user, AI, and market engine.
 
 ## Features
+
 The AI Chat Agent supports a range of capabilities, including:
 
-- **Market Analysis**  
+- **Market Analysis**\
   Generate insights for any trading pair using real-time data from AsterDEX.
-- **Trend Prediction**  
+- **Trend Prediction**\
   Use AI-based analysis to forecast short-term and long-term market trends.
-- **Trading Recommendations**  
+- **Trading Recommendations**\
   Provide users with signals or suggestions based on technical indicators.
-- **Educational Mode**  
+- **Educational Mode**\
   Explain trading terms, risk management, or crypto concepts in simple language.
-- **Conversation Memory**  
+- **Conversation Memory**\
   Maintain context across chats to create a more personalized experience.
 
 ## Example Interactions
-**User:** What is the current BTC/USDT trend?  
+
+**User:** What is the current BTC/USDT trend?\
 **AI:** Based on the latest AsterDEX market data, BTC/USDT is showing a short-term bullish pattern with strong buying volume.
 
-**User:** What about tomorrow’s prediction?  
+**User:** What about tomorrow’s prediction?\
 **AI:** Given the recent RSI and moving averages, there is a moderate chance of a price correction within the next 24 hours.
 
 ## Future Improvements
+
 In future versions, AstraDEX plans to:
+
 - Upgrade the model to **GPT-4 or fine-tuned custom models** for trading tasks.
 - Introduce **reinforcement learning** for adaptive strategy recommendations.
 - Support **multi-language responses** for global accessibility.
