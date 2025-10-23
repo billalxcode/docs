@@ -11,7 +11,13 @@
   "navigation": {
     "pages": [
       "index",
-      "vision-and-mission"
+      "vision-and-mission",
+      "architecture",
+      "features",
+      "ai-chat",
+      "tokenomics",
+      "roadmap",
+      "security"
     ]
   },
   "logo": {
