@@ -9,15 +9,39 @@
   },
   "favicon": "/favicon.ico",
   "navigation": {
-    "pages": [
-      "index",
-      "vision-and-mission",
-      "architecture",
-      "features",
-      "ai-chat",
-      "tokenomics",
-      "roadmap",
-      "security"
+    "tabs": [
+      {
+        "tab": "Docs",
+        "icon": "book-open",
+        "groups": [
+          {
+            "group": "Core",
+            "icon": "home",
+            "pages": [
+              "index",
+              "vision-and-mission",
+              "architecture"
+            ]
+          },
+          {
+            "group": "Features",
+            "icon": "sparkles",
+            "pages": [
+              "features",
+              "ai-chat",
+              "tokenomics",
+              "roadmap"
+            ]
+          },
+          {
+            "group": "Security & Other",
+            "icon": "shield-check",
+            "pages": [
+              "security"
+            ]
+          }
+        ]
+      }
     ]
   },
   "logo": {
