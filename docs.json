@@ -3,9 +3,9 @@
   "theme": "mint",
   "name": "AstraDEX",
   "colors": {
-    "primary": "#d6bb9d",
-    "light": "#d6bb9d",
-    "dark": "#d6bb9d"
+    "primary": "#b68b62",
+    "light": "#b68b62",
+    "dark": "#b68b62"
   },
   "favicon": "/favicon.ico",
   "navigation": {
